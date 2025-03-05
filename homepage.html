@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile Setup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>User Profile Setup</h1>
+
+        <div id="profile-setup">
+            <input type="text" id="fullName" placeholder="Full Name" required>
+            <input type="date" id="dob" placeholder="Date of Birth" required>
+            <input type="text" id="contact" placeholder="Contact Number" required>
+            <input type="text" id="address" placeholder="Address" required>
+            <button onclick="saveProfile()">Save Profile</button>
+            <p id="profile-message"></p>
+        </div>
+    </div>
+    <script src="homepage.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCAS Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<body>
+    
+    <div class="container">
+        <h1>SCAS Student Login</h1>
+        
+        <!-- Step 1: Access Code Verification -->
+        <div id="access-form">
+            <input type="text" id="access-code" placeholder="Enter SCAS Access Code" required>
+            <button onclick="validateAccessCode()">Submit</button>
+            <p id="access-message" style="color: red;"></p>
+        </div>
+
+        <!-- Step 2: Grade and Strand (Hidden initially) -->
+        <div id="grade-strand-form" style="display:none;">
+            <input type="text" id="grade" placeholder="Enter Your Grade (e.g., 12)" required>
+            <input type="text" id="strand" placeholder="Enter Your Strand (e.g., STEM)" required>
+            <button onclick="validateGradeStrand()">Next</button>
+            <p id="grade-message"></p>
+        </div>
+
+        <!-- Step 3: OTP (Hidden initially) -->
+        <div id="otp-form" style="display:none;">
+            <input type="text" id="email" placeholder="Enter Your Email" required>
+            <button onclick="generateOTP()">Send OTP</button>
+            <p id="otp-display" style="color: rgb(255, 255, 255);"></p> <!-- OTP will be shown here -->
+            <input type="text" id="otp" placeholder="Enter OTP" required>
+            <button onclick="login()">Verify OTP</button>
+            <p id="otp-message"></p>
+        </div>
+
+        <!-- Step 4: Account Setup (Hidden initially) -->
+        <div id="account-setup" style="display:none;">
+            <h2>Set Up Your Account</h2>
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button onclick="setupAccount()">Set Up Account</button>
+            <p id="setup-message"></p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
